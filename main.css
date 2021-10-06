@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+}
+.product-detail {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.imagery {
+    flex: 1 1 60%;
+    width: 60%;
+    padding: 50px 100px;
+    background-color: rgb(7, 18, 116);
+    transition: 0.4s;
+}
+
+.detail {
+    flex: 1 1 40%;
+    width: 40%;
+    padding: 50px;
+}
+.detail h1 {
+    color: #212121;
+    font-size: 32px;
+    font-weight: 900px;
+}
+
+.detail h2 {
+    color: #212121;
+    font-size: 22px;
+    font-weight: 700px;
+}
+
+.detail h3 {
+    color: #53565a;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.btn_grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+
+.btn_grid .btn_wrap {
+    flex: 1 1 50%;
+    width: 50%;
+    padding: 15px;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+
+    appearance: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #EEE;
+
+    color: #313131;
+    font-size: 20px;
+    font-weight: 700;
+
+    transition: 0.4s;
+}
+button:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.size {
+    position: relative;
+    z-index: 1;
+}
+
+button.size::before,
+button.size::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+
+    transition: 0.4s;
+}
+
+button.size::after {
+    z-index: -1;
+    background-color: #FFF;
+    border: 3px solid #EEE;
+}
+button.size::before {
+    z-index: -2;
+    background-image: linear-gradient(to right, #ED008D, #8D00ED );
+}
+
+button.size.selected::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.imagery img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    animation: fadein 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.colors .btn_wrap .black.selected {
+    background-color: #212121;
+    color: #FFF;
+}
+
+.colors .btn_wrap .blue.selected {
+    background-color: #2484E4;
+    color: #FFF;
+}
+
+.colors .btn_wrap .red.selected {
+    background-color: #AF1E2D;
+    color: #FFF;
+}
+
+.colors .btn_wrap .yellow.selected {
+    background-color: #FFCE00;
+    color: #FFF;
+}
+
+.colors .btn_wrap .white.selected {
+    background-color: #EEE;
+    color: #212121;
+}
+
+.colors .btn_wrap .coral.selected {
+    background-color: #FF6C37;
+    color: #FFF;
+}
+
+.colors .btn_wrap .black.selected {
+    background-color: #212121;
+    color: #FFF;
+}
+
+.submit {
+    margin-top: 30px;
+    background-image: linear-gradient(to right, transparent 50%, #ED008D 50%, #8D00ED 100%);
+    background-size: 200%;
+    background-position: 0% 50%;
+    transition: 0.8s;
+}
+
+.submit:hover {
+    columns: #FFF;
+    background-position: 100% 50%;
+}
+
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
